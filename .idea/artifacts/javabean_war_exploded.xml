@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="javabeanDemo3:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/javabeanDemo3_war_exploded</output-path>
+  <artifact type="exploded-war" name="javabean:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/javabean_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="javabeanDemo3" />
+          <element id="module-output" name="javabean" />
         </element>
         <element id="directory" name="lib">
           <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/j2ee.jar" />
@@ -15,7 +15,7 @@
           <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/standard-1.1.2.jar" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="javabeanDemo3/web/Web" />
+      <element id="javaee-facet-resources" facet="javabean/web/Web" />
     </root>
   </artifact>
 </component>

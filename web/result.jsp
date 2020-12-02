@@ -1,11 +1,4 @@
-<%@ page import="entity.Triangle" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: A11200321050135
-  Date: 2020/11/30
-  Time: 14:24
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="entity.Loan" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,19 +6,20 @@
 </head>
 <body>
  <%
-     Triangle triangle = new Triangle();
-     int a=Integer.parseInt(request.getParameter("a"));
-     int b=Integer.parseInt(request.getParameter("b"));
-     int c=Integer.parseInt(request.getParameter("c"));
-     triangle.setA(a);
-     triangle.setB(b);
-     triangle.setC(c);
+     Loan loan = new Loan();
+     int a=Integer.parseInt(request.getParameter("amount"));
+     double b=Double.parseDouble(request.getParameter("rate"));
+     System.out.println(b);
+     System.out.println(a);
+     loan.setAmount(a);
+     loan.setRate(b);
  %>
  <h3><%out.println("计算的结果为："); %></h3><hr width="200" align="left">
  <table>
-     <tr><td>三角形的边长分别是：<%=triangle.getA()%>,<%=triangle.getB()%>,<%=triangle.getC()%></td></tr>
-     <tr><td>三角形的周长是：<%=triangle.trianglePerimeter()%></td></tr>
-     <tr><td>三角形的面积是：<%=triangle.triangleArea()%></td></tr>
+     <tr><td>您的贷款金额为：<%=loan.getAmount()%>万元</td></tr>
+     <tr><td>您的贷款利率为：<%=(loan.getRate())*100%>%</td></tr>
+     <tr><td>您的贷款利息为：<%=loan.result()%>万元</td></tr>
+     <tr><td>您的贷款利息为：<%=loan.total()%>万元</td></tr>
      <tr><td align="right"> <a href="index.jsp" >点击返回</a></td></tr>
  </table>
 </body>

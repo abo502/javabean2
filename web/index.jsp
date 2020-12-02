@@ -8,30 +8,25 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>JavaBean</title>
+    <title>贷款计算</title>
   </head>
   <body>
 
-  <form action="./result.jsp" method="post">
-    <h1 align="center">三角形计算:</h1>
+  <form action="/result.jsp" method="post">
+    <h1 align="center">贷款计算:</h1>
     <br>
     <table border="1px" align="center">
       <tr>
-        <td colspan="2">请输入三角形边长:</td>
+        <td>请输入贷款金额:</td>
+        <td><input type="number" name="amount">万元</td>
       </tr>
       <tr>
-        <td colspan="2">
-          <input type="text" name="a"/>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <input type="text" name="b"/>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <input type="text" name="c"/>
+        <td>请选择贷款方式:</td>
+        <td>
+          <select name="rate">
+            <option value="0.045">公积金贷款</option>
+            <option value="0.075">商业贷款</option>
+          </select>
         </td>
       </tr>
       <tr align="center">
